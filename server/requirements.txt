@@ -1,0 +1,10 @@
+trafilatura
+fastapi
+uvicorn
+python-dotenv
+pydantic-settings
+tavily-python
+sentence_transformers
+numpy
+google-generativeai
+websockets

@@ -13,13 +13,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Perplexity clone',
       theme: ThemeData(
         scaffoldBackgroundColor: AppColors.background,
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.submitButton),
         textTheme: GoogleFonts.interTextTheme(
           ThemeData.dark().textTheme,
-
       ),
       ),  
       home: const HomePage(),
@@ -27,3 +26,5 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+

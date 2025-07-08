@@ -22,7 +22,8 @@ class SearchSection extends StatelessWidget {
       ),
 
       const SizedBox(height: 32),
-
+ 
+      // Search Bar
       Container(
         width: 700,
         decoration: BoxDecoration(

@@ -11,14 +11,15 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Row(
         children: [
-          SideBar(),
+          SideBar(),  // Sidebar
           Expanded(
             child: Column(
               children: [
                 Expanded(
-                  child: SearchSection()
+                  child: SearchSection() // Search Section
                   ),
             
+            // Footer
                 Container(
                   padding: EdgeInsets.symmetric( vertical: 16),
                   child: Wrap(
