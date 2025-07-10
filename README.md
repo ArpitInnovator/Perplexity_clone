@@ -30,6 +30,8 @@ A sleek, Perplexity‑inspired AI search assistant that delivers concise answers
 | Real time communication  | Websocket Protocol 
 | APIs     | Gemini API    |
 
+---
+
 ## 🖼️ ScreenShots
 
 ![Screenshot 2025-07-10 124213](https://github.com/user-attachments/assets/a1ec304a-e4ac-4a62-bebd-7ee1040699c3)  
