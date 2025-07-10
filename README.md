@@ -1,16 +1,38 @@
-# perplexity_clone
+# Perplexity Clone 🔍🤖
 
-A new Flutter project.
+A sleek, Perplexity‑inspired AI search assistant that delivers concise answers with cited sources—powered by Google’s Gemini‑Flash‑2.0 model.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Features
 
-A few resources to get you started if this is your first Flutter project:
+- **Ask Anything**  
+  Enter any natural‑language query and receive a clear, concise answer drawn from the web.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Cited Sources**  
+  Every answer comes with numbered source links so you can verify and explore further.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Beautiful, Intuitive UI**  
+  A modern interface inspired by Perplexity AI’s clean design—built in Flutter.
+
+- **Real‑time Streaming**  
+  Watch your AI answer build phrase by phrase, enhancing interactivity.
+
+
+---
+
+## 🧰 Tech Stack
+
+| Layer      | Technology                 |
+| ---------- | -------------------------- |
+| Frontend   | Flutter                    |
+| Backend    | FastAPI                    |
+| Real time communication  | Websocket Protocol 
+| APIs     | Gemini API    |
+
+
+
+
+
+
+
