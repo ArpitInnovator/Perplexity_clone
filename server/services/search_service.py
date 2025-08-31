@@ -1,6 +1,6 @@
 from config import Settings
 from tavily import TavilyClient
-import trafilatura 
+import trafilatura  # type: ignore
 
 settings = Settings()
 tavily_client = TavilyClient(api_key=settings.TAVILY_API_KEY)

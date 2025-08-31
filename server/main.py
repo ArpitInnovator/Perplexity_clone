@@ -11,6 +11,11 @@ search_service = SearchService()
 sort_source_service = SortSourceService()
 llm_service = LLMService()
 
+#root endpoint
+@app.get("/")
+def root():
+    return {"message": "Welcome to Perplexity"}
+
 #chat websocket
 @app.websocket("/ws/chat")
 async def websocket_chat_endpoint(websocket: WebSocket):

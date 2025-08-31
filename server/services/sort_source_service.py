@@ -1,5 +1,5 @@
 from typing import List
-from sentence_transformers import SentenceTransformer 
+from sentence_transformers import SentenceTransformer  # type: ignore
 import numpy as np
 
 class SortSourceService:
