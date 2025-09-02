@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'dart:convert';
 import 'dart:async';
 import 'package:web_socket_client/web_socket_client.dart';
@@ -16,7 +17,13 @@ class ChatWebService {
   Stream<Map<String, dynamic>> get contentStream => _contentController.stream;
 
   void connect() {
-    _socket = WebSocket(Uri.parse('ws://localhost:8000/ws/chat'));
+    final uri = Uri.parse(
+      kReleaseMode
+        ? 'wss://perplexity-clone-wpog.onrender.com/ws/chat'
+        : 'ws://localhost:8000/ws/chat',
+    );
+
+    _socket = WebSocket(uri);
 
     _socket!.messages.listen((message){
       final data = json.decode(message);
@@ -26,7 +33,6 @@ class ChatWebService {
       else if(data['type'] == 'content') {
         _contentController.add(data);
       }
-      
       print(data['type']);
     });
   }
