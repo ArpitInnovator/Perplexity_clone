@@ -38,7 +38,7 @@ class _SideBarState extends State<SideBar> {
                 SideBarButton(isCollapsed: isCollapsed, icon: Icons.search, text: 'Search'),
                 SideBarButton(isCollapsed: isCollapsed, icon: Icons.language, text: 'Spaces'),
                 SideBarButton(isCollapsed: isCollapsed, icon: Icons.auto_awesome, text: 'Discover'),
-                SideBarButton(isCollapsed: isCollapsed, icon: Icons.cloud_outlined, text: 'Library'),
+                // SideBarButton(isCollapsed: isCollapsed, icon: Icons.cloud_outlined, text: 'Library'),
             
                 const Spacer(),
             
