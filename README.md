@@ -28,7 +28,7 @@ A sleek, Perplexity‑inspired AI search assistant that delivers concise answers
 | Frontend   | Flutter                    |
 | Backend    | FastAPI                    |
 | Real time communication  | Websocket Protocol 
-| APIs     | Gemini API    |
+| APIs     | Gemini, Tavily, Groq APIs     |
 
 ---
 
