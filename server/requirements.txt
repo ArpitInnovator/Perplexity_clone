@@ -4,7 +4,6 @@ uvicorn
 python-dotenv
 pydantic-settings
 tavily-python
-# sentence_transformers
 groq == 0.31.0
 numpy
 google-generativeai
