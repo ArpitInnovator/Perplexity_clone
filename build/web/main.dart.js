@@ -84059,7 +84059,7 @@ $.Y1().ahJ()},
 O(a){var s=null,r=t.p
 return A.ayr(A.mG(A.b([new A.tW(s),A.xW(new A.bO(B.a2,A.ib(A.b([A.xW(new A.AN(s),1),A.j_(s,A.OT(B.kX,A.b([new A.bO(new A.aw(12,0,12,0),A.cV("Pro",s,s,s,A.d8(s,s,B.d4,s,s,s,s,s,s,s,s,14,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s),s),new A.bO(new A.aw(12,0,12,0),A.cV("Enterprise",s,s,s,A.d8(s,s,B.d4,s,s,s,s,s,s,s,s,14,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s),s),new A.bO(new A.aw(12,0,12,0),A.cV("Store",s,s,s,A.d8(s,s,B.d4,s,s,s,s,s,s,s,s,14,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s),s),new A.bO(new A.aw(12,0,12,0),A.cV("Blog",s,s,s,A.d8(s,s,B.d4,s,s,s,s,s,s,s,s,14,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s),s),new A.bO(new A.aw(12,0,12,0),A.cV("Careers",s,s,s,A.d8(s,s,B.d4,s,s,s,s,s,s,s,s,14,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s),s),new A.bO(new A.aw(12,0,12,0),A.cV("English(English)",s,s,s,A.d8(s,s,B.d4,s,s,s,s,s,s,s,s,14,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s),s)],r),B.f1,0,0),B.D,s,s,s,s,s,new A.aw(0,16,0,16),s,s,s)],r),B.ak,B.a3,B.an),s),1)],r),B.ak,B.a3,B.an,s))}}
 A.ZN.prototype={
-ahJ(){var s=A.fJ("ws://perplexity-clone-wpog.onrender.com/ws/chat",0,null),r=A.u7(!1,t.z),q=A.u7(!1,t.Si),p=$.aE4()
+ahJ(){var s=A.fJ("wss://perplexity-clone-wpog.onrender.com/ws/chat",0,null),r=A.u7(!1,t.z),q=A.u7(!1,t.Si),p=$.aE4()
 q=new A.OI(s,p,B.Dw,r,new A.Is(B.Al,q),B.v)
 q.r4()
 this.a=q
