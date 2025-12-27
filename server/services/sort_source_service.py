@@ -1,12 +1,12 @@
-from services.groq_service import GroqService
+from services.cohere_service import cohereService
 import numpy as np
 
 class SortSourceService:
     def __init__(self):
-        self.groq_service = GroqService()
+        self.cohere_service = cohereService()
     
     def sort_sources(self, query: str, search_results: list[dict]):
-        """Sort search results by relevance to query using Groq embeddings"""
+        """Sort search results by relevance to query using cohere embeddings"""
         if not search_results:
             return []
         
@@ -16,11 +16,11 @@ class SortSourceService:
             query_texts = [query]
             
             # Get embeddings
-            query_embeddings = self.groq_service.get_embeddings(query_texts)
-            text_embeddings = self.groq_service.get_embeddings(texts)
+            query_embeddings = self.cohere_service.get_embeddings(query_texts)
+            text_embeddings = self.cohere_service.get_embeddings(texts)
             
             # Calculate similarities
-            similarities = self.groq_service.calculate_similarity(
+            similarities = self.cohere_service.calculate_similarity(
                 query_embeddings[0], text_embeddings
             )
             

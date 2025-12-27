@@ -1,16 +1,16 @@
-from groq import Groq
+import cohere
 from config import Settings
 import numpy as np
 
 settings = Settings()
 
-class GroqService:
+class cohereService:
     def __init__(self):
-        self.client = Groq(api_key=settings.GROQ_API_KEY)
-        self.model = "llama3-8b-8192"  # Fast and efficient model
+        self.client = cohere.Client(api_key=settings.COHERE_API_KEY)
+        self.model = "embed-english-light-v3.0"
     
     def get_embeddings(self, texts):
-        """Get embeddings for a list of texts using Groq API"""
+        """Get embeddings for a list of texts using Cohere embed-english-light-v3.0"""
         try:
             # Process texts in batches to avoid rate limits
             batch_size = 10
@@ -19,20 +19,21 @@ class GroqService:
             for i in range(0, len(texts), batch_size):
                 batch = texts[i:i + batch_size]
                 
-                response = self.client.embeddings.create(
-                    model="llama-3.1-8b-instant",
-                    input=batch
+                # Get embeddings for the batch using Cohere API
+                response = self.client.embed(
+                    texts=batch,
+                    model=self.model,
+                    input_type="search_document" if i > 0 else "search_query"
                 )
-                
-                batch_embeddings = [data.embedding for data in response.data]
+                batch_embeddings = response.embeddings
                 all_embeddings.extend(batch_embeddings)
             
             return all_embeddings
             
         except Exception as e:
             print(f"Error getting embeddings: {e}")
-            # Return random embeddings as fallback
-            return [np.random.rand(4096).tolist() for _ in texts]
+            # Return random embeddings as fallback (384 dimensions for embed-english-light-v3.0)
+            return [np.random.rand(384).tolist() for _ in texts]
     
     def calculate_similarity(self, query_embedding, text_embeddings):
         """Calculate cosine similarity between query and text embeddings"""

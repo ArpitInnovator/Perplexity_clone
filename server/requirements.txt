@@ -4,7 +4,7 @@ uvicorn
 python-dotenv
 pydantic-settings
 tavily-python
-groq == 0.31.0
 numpy
 google-generativeai
 websockets
+cohere

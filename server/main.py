@@ -5,13 +5,14 @@ from services.sort_source_service import SortSourceService
 from services.search_service import SearchService
 from services.llm_service import LLMService
 from fastapi.middleware.cors import CORSMiddleware
-from services.groq_service import GroqService
+from services.cohere_service import cohereService
 
 app = FastAPI()
 
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://perplexity-clone-frontend.onrender.com"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -45,10 +46,7 @@ async def websocket_chat_endpoint(websocket: WebSocket):
             await asyncio.sleep(0.1)
             await websocket.send_json({'type': 'content', 'data': chunk})
         
-    # except:
-    #     print('Unexpected error occurred')
-    # finally:
-    #     await websocket.close()
+ 
 
     except Exception as e:
         print(f'Unexpected error occurred: {e}')

@@ -17,7 +17,7 @@ class ChatWebService {
   Stream<Map<String, dynamic>> get contentStream => _contentController.stream;
 
   void connect() {
-    final uri = Uri.parse('wss://perplexity-clone-wpog.onrender.com/ws/chat');
+    final uri = Uri.parse('ws://perplexity-clone-wpog.onrender.com/ws/chat');
 
     _socket = WebSocket(uri);
 

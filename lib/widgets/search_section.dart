@@ -94,15 +94,18 @@ class _SearchSectionState extends State<SearchSection> {
                     const SizedBox(width: 12),
                     SearchBarButton(icon: Icons.add_circle_outline, text: 'Attach'),
                     const Spacer(),
-                    GestureDetector(
-                      onTap: _performSearch, // Use the new method
-                      child: Container(
-                        padding: EdgeInsets.all(9),
-                        decoration: BoxDecoration(
-                          color: AppColors.submitButton,
-                          borderRadius: BorderRadius.circular(40), 
+                    MouseRegion(
+                      cursor: SystemMouseCursors.click,
+                      child: GestureDetector(
+                        onTap: _performSearch, // Use the new method
+                        child: Container(
+                          padding: EdgeInsets.all(9),
+                          decoration: BoxDecoration(
+                            color: AppColors.submitButton,
+                            borderRadius: BorderRadius.circular(40), 
+                          ),
+                          child: const Icon(Icons.arrow_forward, color: AppColors.searchBar, size: 16,)
                         ),
-                        child: const Icon(Icons.arrow_forward, color: AppColors.searchBar, size: 16,)
                       ),
                     ),
                   ]

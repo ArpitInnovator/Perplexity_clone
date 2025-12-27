@@ -85,42 +85,47 @@ class _SourcesSectionState extends State<SourcesSection> {
           spacing: 16,
           runSpacing: 16,
           children: searchResults.map((res) {
-            return GestureDetector( // Wrap with GestureDetector
-              onTap: () => _launchURL(res['url']), // Add tap handler
-              child: Container(
-                width: 150,
-                padding: EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: AppColors.cardColor,
-                  borderRadius: BorderRadius.circular(8),
-                  border: Border.all( // Add border to indicate it's clickable
-                    color: Colors.grey.withOpacity(0.3),
-                    width: 1,
+            return MouseRegion(
+              cursor: isLoading
+            ? SystemMouseCursors.basic   
+            : SystemMouseCursors.click, 
+              child: GestureDetector( // Wrap with GestureDetector
+                onTap: () => _launchURL(res['url']), // Add tap handler
+                child: Container(
+                  width: 150,
+                  padding: EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: AppColors.cardColor,
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all( // Add border to indicate it's clickable
+                      color: Colors.grey.withOpacity(0.3),
+                      width: 1,
+                    ),
                   ),
+                  child: Column(
+                    children: [
+                      Text(
+                     res['title'],
+                     style: TextStyle (
+                      fontWeight: FontWeight.w500,
+                     ),
+                     maxLines: 2,
+                     overflow: TextOverflow.ellipsis,
+                      ),
+                     const SizedBox(height: 8),
+                     Text(
+                      res['url'],
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.grey,
+                      ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                     ),
+                    ]
                 ),
-                child: Column(
-                  children: [
-                    Text(
-                   res['title'],
-                   style: TextStyle (
-                    fontWeight: FontWeight.w500,
-                   ),
-                   maxLines: 2,
-                   overflow: TextOverflow.ellipsis,
-                    ),
-                   const SizedBox(height: 8),
-                   Text(
-                    res['url'],
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: Colors.grey,
-                    ),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                   ),
-                  ]
+                 ),
               ),
-               ),
             );
           }).toList(),
         ),

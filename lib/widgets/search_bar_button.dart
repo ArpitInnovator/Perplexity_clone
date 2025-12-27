@@ -17,6 +17,7 @@ class _SearchBarButtonState extends State<SearchBarButton> {
   @override
   Widget build(BuildContext context) {
     return MouseRegion(
+      cursor: SystemMouseCursors.click,
       onEnter: (event) => setState(() => isHovered = true),
       onExit: (event) => setState(() => isHovered = false),
       child: Container(
